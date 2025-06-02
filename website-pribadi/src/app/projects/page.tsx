@@ -1,4 +1,7 @@
 import type {Metadata } from 'next';
+import Image, { StaticImageData } from 'next/image';
+import image1 from '../../../public/images/project-1.jpg';
+import image2 from '../../../public/images/project-2.png';
 
 export const metadata: Metadata = {
   title: 'Proyek',
@@ -8,6 +11,28 @@ export const metadata: Metadata = {
     description: 'Halaman proyek saya.',
   },
 };
+
+type ProjectItemProps = {
+  name: string;
+  url: string;
+  urlDisplay: string;
+  imageSrc: StaticImageData;
+};
+
+function ProjectItem({ name, url, urlDisplay, imageSrc }: ProjectItemProps) {
+  return (
+    <li>
+      <a href={url}>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <Image className="w-full" src={imageSrc} alt={name} />
+          <div className="font-bold text-xl mb-2">
+
+          </div>
+        </div>
+      </a>
+    </li>
+  )
+}
 
 export default function Home(){
   return (
