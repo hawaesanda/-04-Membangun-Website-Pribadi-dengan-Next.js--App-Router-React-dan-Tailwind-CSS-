@@ -2,6 +2,7 @@ import type {Metadata } from 'next';
 import Image, { StaticImageData } from 'next/image';
 import image1 from '../../../public/images/project-1.jpg';
 import image2 from '../../../public/images/project-2.png';
+import { defaultMetadata } from '@/utils/metadata';
 
 export const metadata: Metadata = {
   title: 'Proyek',
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Proyek',
     description: 'Halaman proyek saya.',
+    images: "https://example.com/default-image.jpg",
+    url: "https://example.com",
   },
 };
 

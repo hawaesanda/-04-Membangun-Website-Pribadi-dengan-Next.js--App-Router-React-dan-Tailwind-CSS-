@@ -1,0 +1,11 @@
+import { url } from "inspector";
+import { title } from "process";
+
+export const defaultMetadata = {
+    title: "Website Pribadi",
+    description: "Website pribadi untuk menampilkan proyek dan esai.",
+    openGraph: {
+        images: "https://example.com/default-image.jpg",
+        url: "https://example.com",
+    }
+}
